@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
-"""Client1 of 4 process
-
-This model contains a program that behave as below. 
-    * Client2:
-        Reads intergers from the socket and calculate the Mean value of the integers.
-
-Example:
-    $ python calculator_server.py
-
-.. _Assessment link:
-   https://hackmd.io/@yS0Jnn7dScOOlYihOAbDfg/rkOZiLJ5Y
+"""This module contains a program that behaves as below. 
+Client2:
+    Reads intergers from the pipe and calculate the Median value of the integers.
 """
+from statistics import median
+
+
 def main():
-    """Start process"""
-    pass
+    """Read data from PIPE and get median"""
+    data = input()
+    print(f'Median is {median(eval(data))}')
+
 
 if __name__ == '__main__':
     main()
